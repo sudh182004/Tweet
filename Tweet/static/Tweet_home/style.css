@@ -1,0 +1,111 @@
+.post-card {
+    margin-bottom: 0.6rem;
+    margin-left: 1rem;
+    margin-top: 1.2rem;
+    width: 320px;
+    background: lightgrey;
+    background: linear-gradient(270deg, blueviolet, purple, dodgerblue);
+    background-size: 600% 600%;
+    animation: move-bg 8s ease infinite;
+    border: 1px solid rgb(84 90 106);
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  @keyframes move-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .avatar {
+    height: 41px;
+    width: 41px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    background-image: linear-gradient(to top left, blueviolet,rgb(73, 31, 112));
+  }
+  
+  .title {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .35s ease-in;
+  }
+  
+  .datetime {
+    font-size: 12px;
+    color: cornsilk;
+    margin: 10px 0;
+  }
+  
+  .image-preview {
+    flex: 1;
+    min-height: 150px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: blueviolet;
+    background-image: linear-gradient(to top left, blueviolet,rgb(73, 31, 112));
+    margin-bottom: 4px;
+  }
+  
+  .comment-like {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px 0;
+  }
+  
+  .comment-like span {
+    cursor: pointer;
+    height: 40px;
+    width: 50px;
+    padding: 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all .15s ease;
+  }
+  
+  .comment-like span:hover {
+    background-color: rgba(137, 43, 226, 0.096);
+  }
+  
+  .comment-like span svg {
+    fill: rgb(255, 255, 255);
+    margin-right: 2px;
+  }
+  .bg-blueviolet {
+    background-color: rgb(0, 0, 0) !important;
+  }
+  
+  .text-white {
+    color: white !important;
+  }
+  .bodys{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .card-container {
+    display: ruby;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Ensures it takes the full height of the viewport */
+}

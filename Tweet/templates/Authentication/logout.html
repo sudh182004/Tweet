@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "Authentications/style.css" %}">
+{% endblock %}
+{% block main %}
+<form method="POST">
+    {% csrf_token %}
+    <button class="button-52" role="button">LogOut</button>
+</form>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+
+{% block main %}
+    <h2>Edit Tweet</h2>
+    
+    <style>
+        /* Styling for the form */
+        body{
+            
+                text-align: center;
+                margin: 20px;
+                padding: 40px;
+                font-family: monospace;
+    font-size: larger;
+        }
+        form {
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Styling for form fields */
+        form p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Styling for the button */
+        form button {
+            background-color: #e50914; /* Red color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #d40812;
+        }
+    </style>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+{% endblock %}

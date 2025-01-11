@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "tweetcreate.css" %}">
+{% endblock %}
+
+{% block main %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="card">
+        <span class="card__title">Create a Tweet</span>
+        <p class="card__content">let your voice echo with a single click. Start tweeting now!
+        </p>
+        <div class="card__form">
+            <input placeholder="" type="text" name="content">
+            <button class="sign-up"> Send Your Tweet</button>
+        </div>
+    </div>
+    {% comment %} {{ form.as_p }}  <!-- Render the form fields -->
+    <button type="submit" class="btn btn-light">Create</button> {% endcomment %}
+</form>
+
+{% endblock %}
